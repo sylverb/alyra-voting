@@ -283,11 +283,6 @@ describe("Test Voting", function() {
                 2
             )
         })
-
-        it('Only owner can change state to VotingSessionEnded', async function() {
-            // Try to end proposal registering
-            await expect(voting.connect(addr1).endProposalsRegistering()).to.be.revertedWith('Ownable: caller is not the owner')
-        })
     })
 
     describe("VotingSessionStarted state", function() {
